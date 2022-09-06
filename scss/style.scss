@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+$font: 'Overpass', sans-serif;
+$orange: hsl(25, 97%, 53%);
+$light-gray: hsl(217, 12%, 63%);
+$medium-gray: hsl(216, 12%, 54%);
+$component-bg: hsl(213, 19%, 18%);
+$main-bg: hsl(216, 12%, 8%);
+
+*{
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: $main-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    font-family: $font;
+    background-color: $component-bg;
+    max-width: 420px;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+h1{
+    color: white;
+}
+input{
+    color: white;
+    background-color: $orange;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 18px;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+input:active{
+    background-color: white;
+    color: $orange;
+}
+p{
+    font-size: 15px;
+    color: $light-gray;
+}
+.rating-main{
+    img{
+        padding: 1rem;
+        background-color: rgba($medium-gray, $alpha: .1);
+        border-radius: 100%;
+    }
+    .paragraph{
+        line-height: 1.5rem;
+    }
+    .rating{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        p{
+            color: $light-gray;
+            font-size: 18px;
+            background-color: rgba($medium-gray, $alpha: .1);
+            padding: .8rem 1.3rem;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+        p:hover{
+            color: white;
+            background-color: $medium-gray;
+        }
+        .active{
+            color: white;
+            background-color: $orange;
+        }
+    }
+}
+.no-display{
+    display: none;
+}
+.thanks{
+    .image{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            margin-bottom: 1rem;
+        }
+        p{
+            background-color: rgba($medium-gray, $alpha: .1);
+            padding: .5rem 1rem;
+            border-radius: 50px;
+            color: $orange;
+        }
+    }
+    .thank-you{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p{
+            line-height: 1.5rem;
+            text-align: center;
+            margin-top: -10px;
+        }
+    }
+}
